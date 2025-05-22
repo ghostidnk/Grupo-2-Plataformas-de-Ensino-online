@@ -1,4 +1,4 @@
-# 📚 Plataforma de Ensino Online – ESCOLHER NOME 
+# 📚 Plataforma de Ensino Online – Woodstock Study 
 
 ## 📌 Sobre o Projeto  
 Este projeto é uma **plataforma de ensino online híbrida**, acessível via web e dispositivos móveis, permitindo a gestão de cursos permitindo aulas gravadas, exercícios, interação entre alunos e professores e um sistema de pagamentos.  
