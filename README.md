@@ -7,7 +7,7 @@ Este projeto é uma **plataforma de ensino online híbrida**, acessível via web
 O sistema será desenvolvido com as seguintes tecnologias:  
 - **Frontend Web:** 
 - **Aplicação Mobile:** 
-- **Backend:** 
+- **Backend: JAVA + SPRINGBOT** 
 - **Banco de Dados:** 
 
 ## 🏗 Arquitetura do Sistema  
