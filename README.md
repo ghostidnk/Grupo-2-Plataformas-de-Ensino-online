@@ -15,12 +15,8 @@ A plataforma segue uma **abordagem híbrida**, garantindo compatibilidade entre 
 
 ## 🛠 Funcionalidades Principais  
 ✅ **Autenticação de Usuários** (Login, cadastro e recuperação de senha)  
-✅ **Gerenciamento de Cursos** (Criação, edição e acompanhamento de cursos)  
+✅ **Gerenciamento de Cursos** (acompanhamento de cursos)  
 ✅ **Aulas Gravadas** (Integração com plataformas de vídeo)  
-✅ **Avaliações e Certificados** (Testes, quizzes e emissão de certificados)  
-✅ **Comunicação** (Chat, fórum e notificações push)  
-✅ **Pagamentos e Assinaturas** (Stripe, PayPal e PIX)  
-✅ **Painel Administrativo** (Dashboard para professores e administradores) 
 
 ## 📱 Interfaces e Usabilidade  
 O sistema foi projetado para ser **responsivo e acessível**, garantindo uma experiência fluida tanto em desktop quanto em dispositivos móveis.  
