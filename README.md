@@ -1,14 +1,14 @@
 # 📚 Plataforma de Ensino Online – Exatas 
 
 ## 📌 Sobre o Projeto  
-Este projeto é uma **plataforma de ensino online híbrida**, acessível via web e dispositivos móveis, permitindo a gestão de cursos permitindo aulas gravadas, exercícios, interação entre alunos e professores e um sistema de pagamentos.  
+Este projeto é uma **plataforma de ensino online híbrida**, acessível via web e dispositivos móveis.  
 
 ## 🚀 Tecnologias Utilizadas  
 O sistema será desenvolvido com as seguintes tecnologias:  
 - **Frontend Web:** 
 - **Aplicação Mobile:** 
 - **Backend: JAVA + SPRINGBOOT** 
-- **Banco de Dados:** 
+- **Banco de Dados:MYSQL** 
 
 ## 🏗 Arquitetura do Sistema  
 A plataforma segue uma **abordagem híbrida**, garantindo compatibilidade entre navegadores e dispositivos móveis, utilizando WebView e APIs nativas quando necessário.  
