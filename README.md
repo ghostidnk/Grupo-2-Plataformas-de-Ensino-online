@@ -35,3 +35,5 @@ O sistema foi projetado para ser **responsivo e acessível**, garantindo uma exp
 ### 🔧 Pré-requisitos  
 Certifique-se de ter instalado:  
 ------
+Java (java version "1.8.0_451")
+Apache maven(para o backend): https://maven.apache.org/install.html
