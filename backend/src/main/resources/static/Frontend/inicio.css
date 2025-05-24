@@ -1,0 +1,185 @@
+/* Paleta base */
+:root {
+    --blue-dark: #030b33;
+    --blue-gradient: linear-gradient(to bottom, #0f3b78, #0a63c7);
+    --blue-light: #4f89ff;
+    --white: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--blue-dark);
+    color: var(--white);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #04123d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+  }
+  
+  .nav-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  
+  .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--blue-light);
+  }
+  
+  .dropbtn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: #122050;
+    min-width: 120px;
+    z-index: 1;
+    border-radius: 4px;
+  }
+  
+  .dropdown-content a {
+    color: var(--white);
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #0f3b78;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Conteúdo */
+  .content {
+    padding: 2rem;
+  }
+  
+  .subjects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .subject-card {
+    background: var(--blue-gradient);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .subject-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Materiais com cores diferentes se quiser diferenciar: */
+  .math { background: linear-gradient(to right, #2255aa, #4477ff); }
+  .physics { background: linear-gradient(to right, #1d3d7a, #3f65cc); }
+  .english { background: linear-gradient(to right, #0a446b, #1594e0); }
+  .chemistry { background: linear-gradient(to right, #2d2f8f, #4c7bff); }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .logo {
+      font-size: 1.2rem;
+    }
+  
+    .subjects-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .course-card, .track-card {
+    flex: 1 1 200px;
+    background: #0a63c7;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+  
+  .course-card:hover, .track-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .stats-section {
+    margin-top: 2rem;
+  }
+  
+  .stats-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .stat-card {
+    flex: 1 1 180px;
+    background: #041a4b;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  .stat-card h3 {
+    margin-bottom: 0.5rem;
+    color: #4f89ff;
+  }
+  
