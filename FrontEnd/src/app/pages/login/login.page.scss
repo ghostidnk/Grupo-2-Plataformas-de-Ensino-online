@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+ion-content {
+  --background: #1b1f3b;
+  font-family: "Actor", sans-serif;
+}
+
+.welcome {
+  color: rgb(252, 252, 252);
+  padding-left: 20px;
+  text-align: left;
+  padding-top: 20vh;
+}
+
+.welcome h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+.welcome p {
+  margin-top: 1px;
+  font-size: 20px;
+}
+
+.caixa_login {
+  background-color: #0a1033;
+  padding: 25px;
+  border-radius: 45px 45px 0 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.caixa_login h3 {
+  color: rgb(250, 250, 250);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+ion-item {
+  --background: #bdbaba;
+  --border-radius: 20px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  margin-bottom: 20px;
+}
+
+ion-input {
+  --color: #000000;
+  --placeholder-color: #070101;
+}
+
+.forgot {
+  color: rgb(250, 250, 250);
+  text-align: right;
+  display: block;
+  padding-bottom: 20px;
+}
+.divisor {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  --background: #1b2a54;
+  width: 80%; /* ou 200px, como preferir */
+  margin: 0 auto; /* centraliza */
+  display: block;
+}
+
+.divisor {
+  color: white; /* cor do texto */
+}
+
+.botoes {
+  margin-bottom: 20px;
+  width: 80%;
+  margin: 0 auto; /* centraliza */
+  display: block;
+}
+
+.signup {
+  color: rgb(250, 250, 250);
+  text-align: center;
+}
+
+ion-button {
+  --background: #1b2a54;
+}
+ion-icon {
+  font-size: 24px;
+  color: #eceaea;
+}

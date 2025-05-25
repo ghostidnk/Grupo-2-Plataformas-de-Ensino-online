@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="voltar">
+    <ion-icon name="arrow-back-outline"></ion-icon><span> Retornar</span>
+  </div>
+
+  <div class="registro">
+     <div class="cadastro">
+      <h1>Cadastre-se</h1>
+      </div>
+    <form (ngSubmit)="cadastrar()">
+      <ion-item lines="full">
+        <ion-input type="email" name="email" placeholder="E-mail" required [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-input type="email" name="confirmEmail" placeholder="Confirme seu e-mail" required [(ngModel)]="confirmEmail"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-input type="password" name="password" placeholder="Senha" required [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-input type="tel" name="telefone" placeholder="Telefone" [(ngModel)]="telefone"></ion-input>
+      </ion-item>
+
+      <div class="termos">
+        <ion-checkbox id="termos-checkbox" name="aceitouTermos" [(ngModel)]="aceitouTermos"></ion-checkbox>
+        <label for="termos-checkbox">Eu aceito os termos de uso.</label>
+    </div>
+
+      <ion-button type="submit" class="login-button" expand="block">Cadastrar</ion-button>
+    </form>
+  </div>
+</ion-content>
