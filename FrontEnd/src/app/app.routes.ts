@@ -43,4 +43,16 @@ export const routes: Routes = [
     path: 'sair',
     loadComponent: () => import('./folder/sair/sair.page').then( m => m.SairPage)
   },
+  {
+    path: 'estatistica',
+    loadComponent: () => import('./pages/estatistica/estatistica.page').then( m => m.EstatisticaPage)
+  },
+  {
+    path: 'novidades',
+    loadComponent: () => import('./pages/novidades/novidades.page').then( m => m.NovidadesPage)
+  },
+  {
+    path: 'cursos',
+    loadComponent: () => import('./pages/cursos/cursos.page').then( m => m.CursosPage)
+  },
 ];

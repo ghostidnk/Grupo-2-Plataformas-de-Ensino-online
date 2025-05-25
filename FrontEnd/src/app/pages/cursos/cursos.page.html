@@ -1,0 +1,50 @@
+<ion-content>
+
+    <ion-toolbar>
+    <ion-menu-button slot="start">
+      <ion-icon name="reorder-three"></ion-icon>
+    </ion-menu-button>
+  </ion-toolbar>
+
+  <div class="titulo">
+    <h1>Nossos Cursos</h1>
+    <ion-searchbar></ion-searchbar>
+  </div>
+
+
+
+  <ion-card class="novidade-card" *ngFor="let materia of materiasMatematica">
+  <div class="faixa-lateral"></div>
+  <ion-card-content>
+    <div class="topo">
+      <span class="titulo">{{ materia.titulo }}</span>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+    <ion-footer>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="principal" [routerLink]="['/principal']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="progresso" [routerLink]="['/estatistica']">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notificacoes" [routerLink]="['/novidades']">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="cursos" [routerLink]="['/cursos']">
+        <ion-icon name="book"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+</ion-content>
