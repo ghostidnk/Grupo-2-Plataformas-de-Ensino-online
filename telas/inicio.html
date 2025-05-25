@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exatas</title>
+  <link rel="stylesheet" href="inicio.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <h1 class="logo">Exatas</h1>
+      
+    </div>
+    <div class="nav-user">
+  <img src="./img/pandinha.png" alt="Usuário" class="user-img" />
+  <div class="dropdown">
+    <button class="dropbtn">▼</button>
+    <div class="dropdown-content">
+      <a href="#">Perfil</a>
+      <a href="#">Sair</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <h2>Suas Matérias</h2>
+    <div class="subjects-container">
+      <div class="subject-card math">Matemática</div>
+      <div class="subject-card physics">Física</div>
+      <div class="subject-card chemistry">Química</div>
+       <div class="subject-card practice">Treine</div>
+    </div>
+
+  <section class="stats-section">
+    <h2>Seu Progresso</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Exercícios</h3>
+        <p>2</p>
+      </div>
+      <div class="stat-card">
+        <h3>Aulas Concluídas</h3>
+        <p>32</p>
+      </div>
+      <div class="stat-card">
+        <h3>Matérias Ativas</h3>
+        <p>4</p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropbtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function() {
+      dropdownContent.style.display = 'none';
+    });
+  });
+</script>
+
+
+
+  </main>
+</body>
+</html>

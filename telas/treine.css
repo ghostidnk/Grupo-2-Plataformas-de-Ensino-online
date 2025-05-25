@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0e1328;
+  color: white;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.menu {
+  width: 250px;
+  background-color: #101530;
+  padding: 20px;
+}
+
+.menu h2 {
+  font-size: 24px;
+  color: #4ca0ff;
+  margin-bottom: 20px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: #4ca0ff;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+.menu .voltar {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.conteudo {
+  flex: 1;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.questao {
+  background: linear-gradient(135deg, #4ca0ff, #6998ff);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.questao p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.questao button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1f2b4a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.questao button:hover {
+  background-color: #32406a;
+}
+
+.resultado {
+  margin-top: 30px;
+  font-size: 18px;
+}

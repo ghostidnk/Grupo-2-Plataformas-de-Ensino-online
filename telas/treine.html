@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercícios de Matemática</title>
+  <link rel="stylesheet" href="treine.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="menu">
+      <h2>Assuntos</h2>
+      <ul>
+        <li><a href="#matematica">Matemática</a></li>
+      </ul>
+      <a class="voltar" href="#">Voltar ao menu principal</a>
+    </aside>
+
+    <main class="conteudo">
+      <section id="matematica">
+        <h1>Exercícios de Matemática</h1>
+
+        <div class="questao" data-correta="2" data-tentativas="0">
+          <p>1) Quanto é 8 x 7?</p>
+          <button onclick="verificar(this, 0)">54</button>
+          <button onclick="verificar(this, 1)">56</button>
+          <button onclick="verificar(this, 2)">63</button>
+          <button onclick="verificar(this, 3)">64</button>
+        </div>
+
+        <div class="questao" data-correta="1" data-tentativas="0">
+          <p>2) Qual é a raiz quadrada de 49?</p>
+          <button onclick="verificar(this, 0)">6</button>
+          <button onclick="verificar(this, 1)">7</button>
+          <button onclick="verificar(this, 2)">8</button>
+          <button onclick="verificar(this, 3)">9</button>
+        </div>
+
+        <div class="questao" data-correta="3" data-tentativas="0">
+          <p>3) Quanto é 25 + 35?</p>
+          <button onclick="verificar(this, 0)">55</button>
+          <button onclick="verificar(this, 1)">60</button>
+          <button onclick="verificar(this, 2)">59</button>
+          <button onclick="verificar(this, 3)">70</button>
+        </div>
+
+        <div class="resultado">
+          <p>Acertos: <span id="acertos">0</span></p>
+          <p>Erros: <span id="erros">0</span></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    let acertos = 0;
+    let erros = 0;
+
+    function verificar(botao, indice) {
+      const questao = botao.parentElement;
+      const correta = parseInt(questao.dataset.correta);
+      let tentativas = parseInt(questao.dataset.tentativas);
+
+      if (botao.disabled || tentativas >= 2) return;
+
+      tentativas++;
+      questao.dataset.tentativas = tentativas;
+
+      if (indice === correta) {
+        botao.style.backgroundColor = '#28a745';
+        botao.textContent += ' ✔ Correto!';
+        acertos++;
+        finalizarQuestao(questao);
+      } else {
+        botao.style.backgroundColor = '#dc3545';
+        botao.textContent += ' ✖ Errado!';
+        if (tentativas >= 2) {
+          erros++;
+          finalizarQuestao(questao);
+        }
+      }
+      atualizarResultado();
+    }
+
+    function finalizarQuestao(questao) {
+      const botoes = questao.querySelectorAll('button');
+      botoes.forEach(b => b.disabled = true);
+    }
+
+    function atualizarResultado() {
+      document.getElementById('acertos').textContent = acertos;
+      document.getElementById('erros').textContent = erros;
+    }
+  </script>
+</body>
+</html>
