@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matemática</title>
     <link rel="stylesheet" href="mat.css">
+    <style>
+        .video-aula {
+            text-align: center;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .video-container iframe {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="page-container">
@@ -25,6 +43,10 @@
             </header>
 
             <section class="cards-container">
+                <div class="card" onclick="mostrarVideo('1QlFNgCuccU ')">
+                    <h3>Equação do 2° Grau</h3>
+                    <p>Conceito de função, tipos e gráficos.</p>
+                </div>
                 <div class="card">
                     <h3>O que é Matemática?</h3>
                     <p>Conceitos fundamentais e história da matemática.</p>
@@ -33,26 +55,25 @@
                     <h3>Álgebra Básica</h3>
                     <p>Equações, expressões e propriedades.</p>
                 </div>
-                <div class="card">
-                    <h3>Equação do 1° Grau</h3>
-                    <p>Figuras geométricas, perímetros e áreas.</p>
-                </div>
-                <div class="card">
-                    <h3>Equação do 2° Grau</h3>
-                    <p>Conceito de função, tipos e gráficos.</p>
-                </div>
             </section>
 
-            <section class="video-aula">
-                <h2>Equação de 2°grau</h2>
+            <section class="video-aula" style="display: none;">
+                <h2>Vídeo Aula</h2>
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/r-Vuvb18kUk"
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-                    encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="videoIframe" width="800" height="450" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </section>
-
         </main>
     </div>
+
+    <script>
+        function mostrarVideo(videoId) {
+            const videoSection = document.querySelector('.video-aula');
+            const iframe = document.getElementById('videoIframe');
+            iframe.src = 'https://www.youtube.com/embed/' + videoId;
+            videoSection.style.display = 'block';
+            videoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
