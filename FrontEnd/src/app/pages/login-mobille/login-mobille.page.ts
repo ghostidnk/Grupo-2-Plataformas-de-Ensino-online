@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { RouterModule, Router } from '@angular/router';
 
 
 @Component({
@@ -34,7 +35,10 @@ export class LoginMobillePage implements OnInit {
   signup() {
     console.log('Crie uma conta');
   }
-  constructor() {}
+  constructor(private router: Router) {}
+     irPrincipal() {
+    this.router.navigate(['/principal-mobille']);
+  }
 
   ngOnInit() {}
 }

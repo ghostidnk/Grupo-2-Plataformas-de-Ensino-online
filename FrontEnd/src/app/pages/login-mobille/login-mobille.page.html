@@ -19,7 +19,7 @@
 
       <a class="forgot" (click)="forgotPassword()">Esqueci minha senha</a>
 
-      <ion-button type="submit" expand="block" class="login-button">Login</ion-button>
+      <ion-button type="submit"  (click)="irPrincipal()"expand="block" class="login-button">Login</ion-button>
     </form>
 
     <div class="divisor">
@@ -28,11 +28,11 @@
 
     <div class="botoes">
       <ion-button expand="block" (click)="loginWithGoogle()">
-        <ion-icon slot="start" name="logo-google"></ion-icon>
+        
         Google
       </ion-button>
       <ion-button expand="block" (click)="loginWithApple()">
-        <ion-icon slot="start" name="logo-apple"></ion-icon>
+        
         Icloud
       </ion-button>
     </div>
