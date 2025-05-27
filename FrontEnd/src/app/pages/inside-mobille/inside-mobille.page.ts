@@ -6,26 +6,16 @@ import { TabsComponent } from 'src/app/components/tabs/tabs.component';
 import { addIcons } from 'ionicons';
 import { RouterModule } from '@angular/router';
 import {
+  documentTextOutline,
+
   reorderThree,
   checkmarkCircle,
   notifications,
   book,
   home,
-  personCircleOutline,
-  mailOutline,
-  mailSharp,
-  paperPlaneOutline,
-  paperPlaneSharp,
-  heartOutline,
-  heartSharp,
-  archiveOutline,
-  archiveSharp,
-  trashOutline,
-  trashSharp,
-  warningOutline,
-  warningSharp,
-  bookmarkOutline,
-  bookmarkSharp,
+  playCircleOutline,
+  logoJavascript
+
 } from 'ionicons/icons';
 
 @Component({
@@ -43,8 +33,13 @@ import {
 })
 export class InsideMobillePage implements OnInit {
   constructor() {
-    addIcons({ reorderThree, checkmarkCircle, notifications, book, home });
+    addIcons({
+      playCircleOutline, documentTextOutline,
+      logoJavascript, reorderThree, checkmarkCircle, notifications, book, home
+    });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
+  abaSelecionada: string = 'video';
+
 }

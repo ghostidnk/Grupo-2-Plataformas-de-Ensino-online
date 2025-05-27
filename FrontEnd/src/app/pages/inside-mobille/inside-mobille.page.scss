@@ -13,15 +13,80 @@
  ion-content {
      font-family: "Actor", sans-serif;
      display: flex;
-     justify-content: center; // centraliza horizontalmente
-     align-items: center; // centraliza verticalmente
-     flex-direction: column; // itens em coluna
+     justify-content: center;
+     align-items: center; 
+     flex-direction: column; 
      padding: 16px;
      --background: #1b2a54;
 
  }
 
 
+ .curso-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #1b1f3b;
+  color: white;
+}
+
+.curso-header p {
+    color: rgb(216, 216, 216);
+}
+
+.curso-icone {
+  font-size: 90px;
+  margin-right: 16px;
+}
+
+.curso-info h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.curso-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.conteudo-aba {
+  padding: 16px;
+}
+.selecione {
+    color: #d9d9d9;
+}
+ion-label{
+    color: #d9d9d9;
+    font-weight: bold;
+}
+
+.conteudo-bloco {
+  padding: 20px;
+}
+
+.bloco-item {
+  background-color: #1b1f3b;
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s;
+}
+
+.bloco-item:hover {
+  background-color: #2a2e50;
+}
+
+ion-icon {
+  font-size: 24px;
+}
 
 
  ion-tab-bar {

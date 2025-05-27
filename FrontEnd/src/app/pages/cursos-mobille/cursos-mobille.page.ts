@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { TabsComponent } from 'src/app/components/tabs/tabs.component';
 import { addIcons } from 'ionicons';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import {
   reorderThree,
   checkmarkCircle,
@@ -29,13 +29,17 @@ import {
 })
 export class CursosMobillePage implements OnInit {
   materiasMatematica = [
-    { titulo: 'Geometria Analítica' },
-    { titulo: 'Probabilidade' },
-    { titulo: 'Álgebra Linear' },
-    { titulo: 'Cálculo Diferencial' },
+    { id: 1, titulo: 'Geometria Analítica' },
+    { id: 2, titulo: 'Probabilidade' },
+    { id: 3, titulo: 'Álgebra Linear' },
+    { id: 4, titulo: 'Cálculo Diferencial' },
   ];
-  constructor() {
+  constructor(private router: Router) {
     addIcons({ reorderThree, checkmarkCircle, notifications, book, home });
+  }
+
+    irParaCurso() {
+    this.router.navigate(['/inside-mobille']);
   }
 
   ngOnInit() {}

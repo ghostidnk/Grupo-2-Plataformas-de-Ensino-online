@@ -13,14 +13,21 @@
 
 
 
-  <ion-card class="novidade-card" *ngFor="let materia of materiasMatematica">
-    <div class="faixa-lateral"></div>
-    <ion-card-content>
-      <div class="topo">
-        <span class="titulo">{{ materia.titulo }}</span>
-      </div>
-    </ion-card-content>
-  </ion-card>
+<ion-card class="novidade-card" *ngFor="let materia of materiasMatematica; let i = index">
+  <div class="faixa-lateral"></div>
+  <ion-card-content>
+    <div class="topo">
+      <span
+        class="titulo"
+        [class.link]="i === 0"
+        (click)="i === 0 && irParaCurso()"
+      >
+        {{ materia.titulo }}
+      </span>
+    </div>
+  </ion-card-content>
+</ion-card>
+
 
 
   <ion-footer>
