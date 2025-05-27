@@ -20,7 +20,13 @@
 
         .video-container iframe {
             max-width: 100%;
-            height: auto;
+            height: 460px;
+        }
+
+        .conteudo {
+            margin-top: 20px;
+            text-align: left;
+            padding: 0 20px;
         }
     </style>
 </head>
@@ -40,42 +46,55 @@
         <main class="main-content">
             <header class="subject-header">
                 <h1>Introdução à química</h1>
-                <p>O que é química, para que ela serve e como está presente no nosso dia a dia.</p>
+                <p>O que é química e como está presente no nosso dia a dia.</p>
             </header>
 
             <section class="cards-container">
-                <div class="card" onclick="mostrarVideo('VrUvy1N66U0')">
+                <div class="card" onclick="mostrarVideo('VrUvy1N66U0', 'Reações químicas', 'Reações químicas são processos nos quais uma ou mais substâncias se transformam em outras, com rearranjo de átomos e formação de novos compostos.')">
                     <h3>Reações químicas</h3>
-                    <p>Estudo sobre o que acontece quando substâncias se transformam em outras.</p>
+                    <p>Estudo sobre o que acontece quando substâncias se transformam.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'Estrutura da matéria', 'A estrutura da matéria está baseada em partículas fundamentais: átomos, moléculas e íons. Entender como essas partículas interagem é essencial para a Química.')">
                     <h3>Estrutura da matéria</h3>
-                    <p>Estudo do que a matéria é feita: átomos, moléculas e íons.</p>
+                    <p>Estudo do que a matéria é feita.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'Tabela periódica', 'A tabela periódica organiza os elementos químicos com base em suas propriedades. Ela permite prever comportamentos e tendências dos elementos.')">
                     <h3>Tabela periódica</h3>
-                    <p>Estudo sobre como os elementos químicos estão organizados. Aprenda a identificar grupos (famílias), períodos e como prever propriedades dos elementos como base em sua posição.</p>
+                    <p>Como os elementos químicos estão organizados.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'Ligações químicas', 'Ligações químicas são interações entre átomos que permitem a formação de moléculas e compostos. Podem ser iônicas, covalentes ou metálicas.')">
                     <h3>Ligações químicas</h3>
-                    <p>Explicação de como os átomos se unem para formar substâncias.</p>
+                    <p>Como os átomos se unem para formar substâncias.</p>
                 </div>
             </section>
 
             <section class="video-aula" style="display: none;">
-                <h2>Reações químicas</h2>
+                <h2 id="tituloAula"></h2>
                 <div class="video-container">
-                    <iframe id="videoIframe" width="800" height="450" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="videoIframe" width="800" height="450" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
+                <div class="conteudo" id="conteudoTexto"></div>
             </section>
         </main>
     </div>
 
     <script>
-        function mostrarVideo(videoId) {
+        function mostrarVideo(videoId, titulo, conteudoTexto) {
             const videoSection = document.querySelector('.video-aula');
             const iframe = document.getElementById('videoIframe');
-            iframe.src = 'https://www.youtube.com/embed/' + videoId;
+            const tituloAula = document.getElementById('tituloAula');
+            const conteudo = document.getElementById('conteudoTexto');
+
+            tituloAula.textContent = titulo;
+            conteudo.textContent = conteudoTexto;
+
+            if (videoId) {
+                iframe.src = 'https://www.youtube.com/embed/' + videoId;
+                iframe.style.display = 'block';
+            } else {
+                iframe.style.display = 'none';
+            }
+
             videoSection.style.display = 'block';
             videoSection.scrollIntoView({ behavior: 'smooth' });
         }

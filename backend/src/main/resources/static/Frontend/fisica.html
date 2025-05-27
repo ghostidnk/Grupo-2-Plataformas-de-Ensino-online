@@ -22,6 +22,12 @@
             max-width: 100%;
             height: 460px;
         }
+
+        .conteudo {
+            margin-top: 20px;
+            text-align: left;
+            padding: 0 20px;
+        }
     </style>
 </head>
 <body>
@@ -44,38 +50,51 @@
             </header>
 
             <section class="cards-container">
-                <div class="card" onclick="mostrarVideo('ObDG87IPzFE')">
+                <div class="card" onclick="mostrarVideo('ObDG87IPzFE', 'Óptica', 'Óptica é o ramo da física que estuda os fenômenos relacionados à luz, como reflexão, refração, dispersão, difração e interferência.')">
                     <h3>Óptica</h3>
-                    <p>Estudo sobre o comportamento da luz, incluindo reflexão, refração, interferência e difração.</p>
+                    <p>Estudo sobre o comportamento da luz.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'Cinemática', 'Cinemática é a área da física que descreve o movimento dos corpos sem se preocupar com suas causas. Analisa grandezas como velocidade, aceleração e deslocamento.')">
                     <h3>Cinemática</h3>
-                    <p>Estuda os movimentos, descrevendo a posição, velocidade e aceleração de um objeto sem se preocupar com as causas que o geram.</p>
+                    <p>Estuda os movimentos, descrevendo a posição e velocidade.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'Dinâmica', 'Dinâmica estuda as causas dos movimentos, principalmente as forças que atuam sobre um corpo. É regida pelas Leis de Newton.')">
                     <h3>Dinâmica</h3>
-                    <p>Analisa as forças que atuam sobre um objeto e como essas forças afetam seu movimento.</p>
+                    <p>Analisa as forças que atuam sobre um objeto.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'Termodinâmica', 'Termodinâmica investiga as relações entre calor, trabalho e energia. É essencial para entender motores térmicos, refrigeração e muitos fenômenos naturais.')">
                     <h3>Termodinâmica</h3>
-                    <p>Investiga a relação entre calor, temperatura e energia, abordando conceitos como calor específico, capacidade térmica e leis da Termodinâmica.</p>
+                    <p>Investiga a relação entre calor, temperatura e energia.</p>
                 </div>
             </section>
 
             <section class="video-aula" style="display: none;">
-                <h2>Optica</h2>
+                <h2 id="tituloAula"></h2>
                 <div class="video-container">
-                    <iframe id="videoIframe" width="800" height="450" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="videoIframe" width="800" height="450" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
+                <div class="conteudo" id="conteudoTexto"></div>
             </section>
         </main>
     </div>
 
     <script>
-        function mostrarVideo(videoId) {
+        function mostrarVideo(videoId, titulo, conteudoTexto) {
             const videoSection = document.querySelector('.video-aula');
             const iframe = document.getElementById('videoIframe');
-            iframe.src = 'https://www.youtube.com/embed/' + videoId;
+            const tituloAula = document.getElementById('tituloAula');
+            const conteudo = document.getElementById('conteudoTexto');
+
+            tituloAula.textContent = titulo;
+            conteudo.textContent = conteudoTexto;
+
+            if (videoId) {
+                iframe.src = 'https://www.youtube.com/embed/' + videoId;
+                iframe.style.display = 'block';
+            } else {
+                iframe.style.display = 'none';
+            }
+
             videoSection.style.display = 'block';
             videoSection.scrollIntoView({ behavior: 'smooth' });
         }

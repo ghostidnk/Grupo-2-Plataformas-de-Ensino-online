@@ -22,6 +22,12 @@
             max-width: 100%;
             height: 460px;
         }
+
+        .conteudo {
+            margin-top: 20px;
+            text-align: left;
+            padding: 0 20px;
+        }
     </style>
 </head>
 <body>
@@ -43,34 +49,47 @@
             </header>
 
             <section class="cards-container">
-                <div class="card" onclick="mostrarVideo('1QlFNgCuccU ')">
+                <div class="card" onclick="mostrarVideo('1QlFNgCuccU', 'Equação do 2° Grau', 'A equação do segundo grau é aquela que possui a variável elevada ao quadrado. Sua forma geral é ax² + bx + c = 0. Para resolvê-la, utiliza-se a fórmula de Bhaskara, determinando as raízes da equação.')">
                     <h3>Equação do 2° Grau</h3>
                     <p>Conceito de função, tipos e gráficos.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'O que é Matemática?', 'Matemática é a ciência que estuda padrões, estruturas, mudanças e espaços. Ela é fundamental para diversas áreas do conhecimento e atividades do cotidiano.')">
                     <h3>O que é Matemática?</h3>
                     <p>Conceitos fundamentais e história da matemática.</p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="mostrarVideo('', 'Álgebra Básica', 'Álgebra é um ramo da matemática que lida com símbolos e as regras para manipular esses símbolos. Envolve expressões, equações e suas propriedades.')">
                     <h3>Álgebra Básica</h3>
                     <p>Equações, expressões e propriedades.</p>
                 </div>
             </section>
 
             <section class="video-aula" style="display: none;">
-                <h2>Equação de 2°grau</h2>
+                <h2 id="tituloAula"></h2>
                 <div class="video-container">
-                    <iframe id="videoIframe" width="1000" height="4060" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="videoIframe" width="1000" height="460" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
+                <div class="conteudo" id="conteudoTexto"></div>
             </section>
         </main>
     </div>
 
     <script>
-        function mostrarVideo(videoId) {
+        function mostrarVideo(videoId, titulo, conteudoTexto) {
             const videoSection = document.querySelector('.video-aula');
             const iframe = document.getElementById('videoIframe');
-            iframe.src = 'https://www.youtube.com/embed/' + videoId;
+            const tituloAula = document.getElementById('tituloAula');
+            const conteudo = document.getElementById('conteudoTexto');
+
+            tituloAula.textContent = titulo;
+            conteudo.textContent = conteudoTexto;
+
+            if (videoId) {
+                iframe.src = 'https://www.youtube.com/embed/' + videoId;
+                iframe.style.display = 'block';
+            } else {
+                iframe.style.display = 'none';
+            }
+
             videoSection.style.display = 'block';
             videoSection.scrollIntoView({ behavior: 'smooth' });
         }
