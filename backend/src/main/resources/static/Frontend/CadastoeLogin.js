@@ -11,7 +11,7 @@ function cadastrarUsuario() {
     grupoPermissao: formData.get('grupoPermissao')
   };
 
-  fetch('http://localhost:8080/cadastro', {
+  fetch('http://localhost:8080/api/cadastro', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ function logarUsuario() {
     senha: formData.get('senha')
   };
 
-  fetch('http://localhost:8080/login', {
+  fetch('http://localhost:8080/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

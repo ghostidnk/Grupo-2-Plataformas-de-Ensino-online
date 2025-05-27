@@ -78,3 +78,13 @@ body {
     color: white;
 }
 
+.video-aula {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}

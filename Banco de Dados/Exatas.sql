@@ -7,7 +7,7 @@ CREATE TABLE Usuarios (
     cpf VARCHAR(14) UNIQUE,
     email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
-    tipo_usuario ENUM('Aluno', 'Mentor', 'Administrador') NOT NULL,
+    tipo_usuario ENUM('Aluno') NOT NULL,
     funcao VARCHAR(50),
     grupo_permissao VARCHAR(100)
 );
