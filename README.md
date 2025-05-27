@@ -31,6 +31,6 @@ O sistema foi projetado para ser **responsivo e acessível**, garantindo uma exp
 ### 🔧 Pré-requisitos  
 Certifique-se de ter instalado:  
 ------
-🔗 Baixe aqui o JDK 17:
-https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-Apache maven(para o backend): https://maven.apache.org/install.html
+- **🔗 Baixe aqui o JDK 17:
+- **https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+- **Maven 3.4.6(para o backend)
