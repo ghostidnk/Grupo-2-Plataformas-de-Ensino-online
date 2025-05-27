@@ -27,7 +27,7 @@ O sistema foi projetado para ser **responsivo e acessível**, garantindo uma exp
 - **Ajustes contínuos** com base no feedback dos usuários.  
 
 ## 📌 Como Rodar o Projeto  
-
+- comandos para rodar o backend : mvn -DskipTests install, mvn spring-boot:run
 ### 🔧 Pré-requisitos  
 Certifique-se de ter instalado:  
 ------
