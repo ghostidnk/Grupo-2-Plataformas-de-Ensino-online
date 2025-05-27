@@ -34,25 +34,27 @@
   </div>
 </ion-content>
 
-<ion-footer>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="principal" [routerLink]="['/principal']">
-      <ion-icon name="home"></ion-icon>
- 
-    </ion-tab-button>
+  <ion-footer>
 
-    <ion-tab-button tab="cadastro" [routerLink]="['/cadastro']">
-      <ion-icon name="checkmark-circle"></ion-icon>
-   
-    </ion-tab-button>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="principal" [routerLink]="['/principal-mobille']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
 
-    <ion-tab-button tab="notificacoes" [routerLink]="['/novidades']">
-      <ion-icon name="notifications"></ion-icon>
+      <ion-tab-button tab="progresso" [routerLink]="['/estatistica-mobille']">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
 
-    </ion-tab-button>
+      <ion-tab-button tab="notificacoes" [routerLink]="['/novidades-mobille']">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
 
-    <ion-tab-button tab="cursos" [routerLink]="['/cursos']">
-      <ion-icon name="book"></ion-icon>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-footer>
+      <ion-tab-button tab="cursos" [routerLink]="['/cursos-mobille']">
+        <ion-icon name="book"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>

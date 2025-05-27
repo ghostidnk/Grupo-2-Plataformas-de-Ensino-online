@@ -1,0 +1,34 @@
+<ion-content>
+
+  <ion-toolbar>
+    <ion-menu-button slot="start">
+      <ion-icon name="reorder-three"></ion-icon>
+    </ion-menu-button>
+  </ion-toolbar>
+
+
+   <ion-footer>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="principal" [routerLink]="['/principal-mobille']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="progresso" [routerLink]="['/estatistica-mobille']">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notificacoes" [routerLink]="['/novidades-mobille']">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="cursos" [routerLink]="['/cursos-mobille']">
+        <ion-icon name="book"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+</ion-content>

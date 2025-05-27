@@ -11,18 +11,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./folder/folder.page').then((m) => m.FolderPage),
   },
-  {
-    path: 'login',
-    loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
-  },
-  {
-    path: 'cadastro',
-    loadComponent: () => import('./pages/cadastro/cadastro.page').then( m => m.CadastroPage)
-  },
-  {
-    path: 'principal',
-    loadComponent: () => import('./pages/principal/principal.page').then( m => m.PrincipalPage)
-  },
+
   {
     path: 'perfil',
     loadComponent: () => import('./folder/perfil/perfil.page').then( m => m.PerfilPage)
@@ -43,16 +32,33 @@ export const routes: Routes = [
     path: 'sair',
     loadComponent: () => import('./folder/sair/sair.page').then( m => m.SairPage)
   },
+
   {
-    path: 'estatistica',
-    loadComponent: () => import('./pages/estatistica/estatistica.page').then( m => m.EstatisticaPage)
+    path: 'cadastro-mobille',
+    loadComponent: () => import('./pages/cadastro-mobille/cadastro-mobille.page').then( m => m.CadastroMobillePage)
   },
   {
-    path: 'novidades',
-    loadComponent: () => import('./pages/novidades/novidades.page').then( m => m.NovidadesPage)
+    path: 'cursos-mobille',
+    loadComponent: () => import('./pages/cursos-mobille/cursos-mobille.page').then( m => m.CursosMobillePage)
   },
   {
-    path: 'cursos',
-    loadComponent: () => import('./pages/cursos/cursos.page').then( m => m.CursosPage)
+    path: 'estatistica-mobille',
+    loadComponent: () => import('./pages/estatistica-mobille/estatistica-mobille.page').then( m => m.EstatisticaMobillePage)
+  },
+  {
+    path: 'inside-mobille',
+    loadComponent: () => import('./pages/inside-mobille/inside-mobille.page').then( m => m.InsideMobillePage)
+  },
+  {
+    path: 'login-mobille',
+    loadComponent: () => import('./pages/login-mobille/login-mobille.page').then( m => m.LoginMobillePage)
+  },
+  {
+    path: 'novidades-mobille',
+    loadComponent: () => import('./pages/novidades-mobille/novidades-mobille.page').then( m => m.NovidadesMobillePage)
+  },
+  {
+    path: 'principal-mobille',
+    loadComponent: () => import('./pages/principal-mobille/principal-mobille.page').then( m => m.PrincipalMobillePage)
   },
 ];

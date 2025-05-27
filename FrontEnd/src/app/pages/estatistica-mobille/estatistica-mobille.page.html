@@ -1,0 +1,83 @@
+<ion-content>
+  <ion-toolbar>
+    <ion-menu-button slot="start">
+      <ion-icon name="reorder-three"></ion-icon>
+    </ion-menu-button>
+  </ion-toolbar>
+  <div class="texto">
+    <h1>Meu Progresso</h1>
+
+  </div>
+
+  <div class="selecione">
+    <ion-list>
+      <ion-select label="Selecione o Mês" [(ngModel)]="mesSelecionado">
+        <ion-select-option *ngFor="let mes of meses" [value]="mes">{{ mes }}</ion-select-option>
+      </ion-select>
+    </ion-list>
+  </div>
+
+  <div class="grafico">
+    <h2>Assuntos mais estudados em {{ mesSelecionado }}</h2>
+
+    <div class="grafico-barras">
+      <div class="barra" style="height: 80%;">
+        <span>Matemática</span>
+      </div>
+      <div class="barra" style="height: 60%;">
+        <span>Português</span>
+      </div>
+      <div class="barra" style="height: 40%;">
+        <span>Física</span>
+      </div>
+    </div>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Maiores Pontuações</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ul>
+        <li>
+          <span class="nome">Geometria</span>
+          <span class="pontos">980 pts</span>
+        </li>
+        <li>
+          <span class="nome">Cálculo</span>
+          <span class="pontos">910 pts</span>
+        </li>
+        <li>
+          <span class="nome">Álgebra</span>
+          <span class="pontos">870 pts</span>
+        </li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="principal" [routerLink]="['/principal-mobille']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="progresso" [routerLink]="['/estatistica-mobille']">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notificacoes" [routerLink]="['/novidades-mobille']">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="cursos" [routerLink]="['/cursos-mobille']">
+        <ion-icon name="book"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+</ion-content>
