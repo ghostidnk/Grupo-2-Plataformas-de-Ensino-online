@@ -28,9 +28,16 @@ O sistema foi projetado para ser **responsivo e acessível**, garantindo uma exp
 
 ## 📌 Como Rodar o Projeto  
 - comandos para rodar o backend : mvn -DskipTests install, mvn spring-boot:run
+- comandos para iniciar a Aplicação Mobile : Ionic Serve
 ### 🔧 Pré-requisitos  
 Certifique-se de ter instalado:  
 ------
-- **🔗 Baixe aqui o JDK 17:
-- **https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-- **Maven 3.4.6(para o backend)
+## BackEnd: 
+- **🔗 Baixe aqui o JDK 17:**
+ https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+- **Maven 3.4.6(para o backend)**
+------
+## Para Mobile:
+- **Ionic** 
+- **Node**
+- **angular**
