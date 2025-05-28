@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-mobille',
@@ -24,7 +25,11 @@ export class CadastroMobillePage implements OnInit {
       telefone: this.telefone,
     });
   }
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+
+  goToLogin() {
+    this.router.navigate(['/principal-mobille']);
+  }
 }

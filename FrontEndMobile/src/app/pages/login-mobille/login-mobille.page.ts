@@ -33,7 +33,7 @@ export class LoginMobillePage implements OnInit {
   }
 
   signup() {
-    console.log('Crie uma conta');
+    this.router.navigate(['/cadastro-mobille']);
   }
   constructor(private router: Router) {}
      irPrincipal() {
