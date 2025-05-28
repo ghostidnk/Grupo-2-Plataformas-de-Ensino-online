@@ -5,8 +5,8 @@ Este projeto é uma **plataforma de ensino online híbrida**, acessível via web
 
 ## 🚀 Tecnologias Utilizadas  
 O sistema será desenvolvido com as seguintes tecnologias:  
-- **Frontend Web:** 
-- **Aplicação Mobile:** 
+- **Frontend Web:HTML, CSS E JS** 
+- **Aplicação Mobile:IONIC + ANGULAR + CORDOVA** 
 - **Backend: JAVA + SPRINGBOOT** 
 - **Banco de Dados:MYSQL** 
 
