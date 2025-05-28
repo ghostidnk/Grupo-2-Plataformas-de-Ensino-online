@@ -31,6 +31,8 @@
     </style>
 </head>
 <body>
+    <canvas id="background"></canvas>
+
     <div class="page-container">
         <aside class="sidebar">
             <h2>Assuntos</h2>
@@ -98,6 +100,58 @@
             videoSection.style.display = 'block';
             videoSection.scrollIntoView({ behavior: 'smooth' });
         }
+
+        // Animação de fundo
+        const canvas = document.getElementById('background');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let shapes = [];
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        for (let i = 0; i < 150; i++) {
+            shapes.push({
+                x: random(0, width),
+                y: random(0, height),
+                size: random(2, 6),
+                speedX: random(-1.5, 1.5),
+                speedY: random(-1.5, 1.5),
+                opacity: random(0.1, 0.6)
+            });
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let shape of shapes) {
+                ctx.beginPath();
+                ctx.arc(shape.x, shape.y, shape.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(86, 162, 245, ${shape.opacity})`;
+                ctx.fill();
+
+                shape.x += shape.speedX;
+                shape.y += shape.speedY;
+
+                if (shape.x < 0 || shape.x > width) shape.speedX *= -1;
+                if (shape.y < 0 || shape.y > height) shape.speedY *= -1;
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
     </script>
 </body>
 </html>
