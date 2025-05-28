@@ -1,0 +1,135 @@
+
+/* Estilo para o ícone do usuário */
+.user-icon {
+  font-size: 60px; /* Tamanho do ícone conforme solicitado */
+  color: white;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Estilo para o cabeçalho e nota */
+ion-list-header, ion-note {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Container para texto */
+ion-list-header + ion-note {
+  display: block; /* Faz a nota aparecer abaixo do cabeçalho */
+  margin-top: -5px;
+}
+
+/* Cores de fundo */
+ion-content {
+  --background: #041134;
+}
+
+ion-list {
+  background: #041134;
+}
+
+ion-item {
+  --background: #041134;
+}
+
+/* Estilos específicos para MD (Material Design) */
+ion-menu.md ion-content {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+ion-menu.md ion-list {
+  padding: 20px 0;
+}
+
+ion-menu.md ion-note {
+  margin-bottom: 30px;
+}
+
+ion-menu.md ion-list-header,
+ion-menu.md ion-note {
+  color: white;
+  padding-left: 10px;
+}
+
+ion-menu.md ion-list#inbox-list ion-list-header {
+  font-size: 22px;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+ion-menu.md ion-item {
+  color: white;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border-radius: 4px;
+}
+
+ion-menu.md ion-item.selected {
+  color: white;
+  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+}
+
+ion-menu.md ion-item.selected ion-icon {
+  color: white;
+}
+
+ion-menu.md ion-item ion-icon {
+  color: white;
+}
+
+ion-menu.md ion-item ion-label {
+  font-weight: 500;
+}
+
+/* Estilos específicos para iOS */
+ion-menu.ios ion-content {
+  --padding-bottom: 20px;
+}
+
+ion-menu.ios ion-list {
+  padding: 20px 0 0 0;
+}
+
+ion-menu.ios ion-note {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+ion-menu.ios ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 50px;
+}
+
+ion-menu.ios ion-item.selected ion-icon {
+  color: white;
+}
+
+ion-menu.ios ion-item ion-icon {
+  font-size: 24px;
+  color: white;
+}
+
+ion-menu.ios ion-list-header,
+ion-menu.ios ion-note {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+ion-menu.ios ion-note {
+  margin-bottom: 8px;
+}
+
+ion-note {
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+}
+
+ion-item.selected {
+  --color: var(--ion-color-primary);
+}

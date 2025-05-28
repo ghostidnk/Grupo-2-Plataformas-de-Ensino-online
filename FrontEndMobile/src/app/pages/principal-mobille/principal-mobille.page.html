@@ -1,0 +1,132 @@
+<ion-content>
+
+  <div class="parte-cima">
+    <ion-toolbar>
+      <ion-menu-button slot="start">
+        <ion-icon class="user-icon" name="person-circle-outline"></ion-icon>
+      </ion-menu-button><!--  menu lateral  -->
+      <ion-searchbar></ion-searchbar>
+    </ion-toolbar>
+  </div>
+
+  <div class="andamento">
+    <h3>Assuntos em andamento</h3>
+
+    <!-- Container para rolagem horizontal -->
+    <div class="horizontal-scroll-container">
+      <!-- Item para cada card -->
+      <div class="card-item" *ngFor="let curso of cursos">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ curso.nome }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Duração: {{ curso.duracao }}<br />
+            Nível: {{ curso.nivel }}
+
+            <!-- Barra de Progresso -->
+            <div style="margin-top: 10px;"
+              *ngIf="curso.horasConcluidas !== undefined && curso.horasTotais !== undefined && curso.horasTotais > 0">
+              <ion-progress-bar [value]="curso.horasConcluidas / curso.horasTotais" color="primary">
+              </ion-progress-bar>
+              <p style="font-size: 0.8em; text-align: right; margin-top: 2px;">
+                {{ curso.horasConcluidas }} / {{ curso.horasTotais }} horas
+              </p>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="matriculados">
+    <h3>Matriculados</h3>
+
+
+    <div class="horizontal-scroll-container">
+
+      <div class="card-item" *ngFor="let curso of cursos">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ curso.nome }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Duração: {{ curso.duracao }}<br />
+            Nível: {{ curso.nivel }}
+
+
+            <div style="margin-top: 10px;"
+              *ngIf="curso.horasConcluidas !== undefined && curso.horasTotais !== undefined && curso.horasTotais > 0">
+              <ion-progress-bar [value]="curso.horasConcluidas / curso.horasTotais" color="primary">
+              </ion-progress-bar>
+              <p style="font-size: 0.8em; text-align: right; margin-top: 2px;">
+                {{ curso.horasConcluidas }} / {{ curso.horasTotais }} horas
+              </p>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="favoritos">
+    <h3>Favoritos</h3>
+
+
+    <div class="horizontal-scroll-container">
+
+      <div class="card-item" *ngFor="let curso of cursos">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ curso.nome }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Duração: {{ curso.duracao }}<br />
+            Nível: {{ curso.nivel }}
+
+            <!-- Barra de Progresso -->
+            <div style="margin-top: 10px;"
+              *ngIf="curso.horasConcluidas !== undefined && curso.horasTotais !== undefined && curso.horasTotais > 0">
+              <ion-progress-bar [value]="curso.horasConcluidas / curso.horasTotais" color="primary">
+              </ion-progress-bar>
+              <p style="font-size: 0.8em; text-align: right; margin-top: 2px;">
+                {{ curso.horasConcluidas }} / {{ curso.horasTotais }} horas
+              </p>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  <ion-footer>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="principal" [routerLink]="['/principal-mobille']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="progresso" [routerLink]="['/estatistica-mobille']">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notificacoes" [routerLink]="['/novidades-mobille']">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="cursos" [routerLink]="['/cursos-mobille']">
+        <ion-icon name="book"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+
+
+
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-content>
+  <ion-toolbar>
+  <ion-menu-button slot="start">
+        <ion-icon name="reorder-three"></ion-icon>
+      </ion-menu-button>
+  </ion-toolbar>    
+  <div class="welcome">
+    <ion-icon class="user-icon" name="person-circle-outline"></ion-icon>
+    <h1>Usuário</h1>
+
+  </div>
+
+  <div class="caixa_login">
+    <h3>Alterar Cadastro</h3>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-input name="nome" type="text" required placeholder="Nome Completo"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input name="dataNascimento" type="date" required placeholder="Data de Nascimento"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input name="email" type="email" required placeholder="E-mail"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Assinatura/plano</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="botao">Fazer Alterações</ion-button>
+  </div>
+</ion-content>
+
+  <ion-footer>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="principal" [routerLink]="['/principal-mobille']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="progresso" [routerLink]="['/estatistica-mobille']">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notificacoes" [routerLink]="['/novidades-mobille']">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="cursos" [routerLink]="['/cursos-mobille']">
+        <ion-icon name="book"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>

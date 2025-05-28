@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+ion-toolbar {
+     --background: #1b1f3b;
+   
+}
+ion-menu-button {
+    font-size: 30px;
+     color: white;
+}
+ion-content {
+  --background: #1b1f3b;
+  font-family: "Actor", sans-serif;
+   --padding-bottom: 56px;
+   
+}
+
+.welcome {
+  color: rgb(252, 252, 252);
+  padding: 20px;
+  text-align: center; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  height: 50vh; 
+}
+
+
+
+.welcome .user-icon {
+  font-size: 80px; 
+  margin-bottom: 10px;
+}
+
+
+.welcome h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0; 
+}
+.caixa_login {
+  background-color: #0a1033;
+  padding: 25px;
+  border-radius: 45px 45px 0 0;
+  width: 100%;
+  height: 50vh; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto; 
+  color: white; 
+}
+.caixa_login h3 {
+    display: flex;
+    flex-direction: column;
+      align-items: center; 
+  justify-content: center; 
+}
+.caixa_login ion-list {
+  background: transparent; 
+  padding: 0;
+}
+
+.caixa_login ion-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --border-color: rgba(255, 255, 255, 0.2); 
+  color: white;
+  margin-bottom: 10px;
+}
+
+ion-input {
+    --color:white;
+    --background: rgba(255, 255, 255, 0.1);
+    --border-radius: 15px;
+    --padding-start: 15px
+}
+
+ion-button {
+    text-align: center;
+    --border-radius: 15px;
+    display: flex;
+}
+
+ion-tab-bar {
+    --background: #1b1f3b;
+
+ justify-content: space-around;
+    
+}
+
+ ion-tab-bar ion-icon{
+    font-size: 25px;
+    color: white;
+}
+
+ion-footer {
+   justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  z-index: 10 !important; 
+}
+

@@ -1,0 +1,77 @@
+<ion-content>
+
+  <ion-toolbar>
+    <ion-menu-button slot="start">
+      <ion-icon name="reorder-three"></ion-icon>
+    </ion-menu-button>
+  </ion-toolbar>
+
+
+
+  <div class="curso-header">
+    <ion-icon name="logo-javascript" class="curso-icone"></ion-icon>
+    <div class="curso-info">
+      <h2>Geometria Analitica</h2>
+      <p>Na matemática clássica, a geometria analítica, também chamada geometria de coordenadas e de geometria cartesiana, é o estudo da geometria por meio de um sistema de coordenadas e dos princípios da álgebra e da análise.</p>
+    </div>
+  </div>
+
+  <ion-segment [(ngModel)]="abaSelecionada" color="primary">
+    <ion-segment-button value="video">
+      <ion-label>Vídeo Aulas</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="exercicios">
+      <ion-label>Exercícios</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+<div *ngIf="abaSelecionada === 'video'" class="conteudo-bloco">
+  <a href="https://www.youtube.com/watch?v=ZxY4k1aRTOI" target="_blank" class="bloco-item">
+    <ion-icon name="play-circle-outline"></ion-icon>
+    <span>Assistir aula de Geometria Analítica</span>
+  </a>
+</div>
+
+<div *ngIf="abaSelecionada === 'exercicios'" class="conteudo-bloco">
+  <div class="bloco-item">
+    <ion-icon name="document-text-outline"></ion-icon>
+    <span>Exercício 1: Vetores no plano</span>
+  </div>
+  <div class="bloco-item">
+    <ion-icon name="document-text-outline"></ion-icon>
+    <span>Exercício 2: Equações da reta</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+   <ion-footer>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="principal" [routerLink]="['/principal-mobille']">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="progresso" [routerLink]="['/estatistica-mobille']">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notificacoes" [routerLink]="['/novidades-mobille']">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="cursos" [routerLink]="['/cursos-mobille']">
+        <ion-icon name="book"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+</ion-content>
